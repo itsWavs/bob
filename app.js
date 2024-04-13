@@ -19,10 +19,10 @@ function displayTemperature() {
   temperatureDisplay.innerText = slider.value + "%";
 }
 function bobify(inputString) {
-  outputArray = [];
-  loweredInput = inputString.toLowerCase();
+  const outputArray = [];
+  const loweredInput = inputString.toLowerCase();
   for (character of loweredInput) {
-    isUpper = Math.random() < slider.value / 100;
+    const isUpper = Math.random() < slider.value / 100;
     outputArray.push(
       isUpper ? character.toUpperCase() : character.toLowerCase()
     );
