@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bobifier</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+      "
+    >
+      <h1>Welcome to the Bobifier!</h1>
+      <input
+        style="
+          border: none;
+          background-color: lightgray;
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 50px;
+          width: 80%;
+        "
+        type="text"
+        name=""
+        id="input_string"
+        placeholder="Text to bobify here"
+      />
+      <div
+        style="
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        "
+      >
+        <h3>Set your Bobifying Temperature here:</h3>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+          "
+        >
+          <input
+            type="range"
+            id="slider"
+            min="0"
+            max="100"
+            step="10"
+            style="width: 100%"
+          />
+          <h3
+            id="temperatureDisplay"
+            style="width: 100px; text-align: right"
+          ></h3>
+        </div>
+      </div>
+      <div id="bobifyButton" class="bobifyButton">Bobify!</div>
+      <div
+        id="output"
+        style="
+          margin-top: 50px;
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+          /* text-align: center; */
+          background-color: rgb(230, 230, 230);
+          width: 80%;
+          border-radius: 10px;
+          margin-bottom: 50px;
+          overflow-y: scroll;
+        "
+      ></div>
+      <div class="bobifyButton" id="clipboardButton">Copy to clipboard</div>
+    </div>
+    <script defer src="./app.js"></script>
+  </body>
+  <style>
+    html {
+      background-color: beige;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .bobifyButton {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all;
+      transition-duration: 100ms;
+      user-select: none;
+    }
+
+    .scroll {
+      overflow-y: scroll;
+    }
+
+    .bobifyButton:hover {
+      filter: brightness(0.9);
+    }
+    .bobifyButton:active {
+      transform: scale(0.95);
+    }
+  </style>
+</html>
