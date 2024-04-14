@@ -6,18 +6,28 @@ const slider = document.getElementById("slider");
 const temperatureDisplay = document.getElementById("temperatureDisplay");
 
 bobifyButton.addEventListener("click", handleBobify);
-clipboardButton.addEventListener("click", handleClipboard);
+clipboardButton.addEventListener("click", handleClipboardCopy);
 slider.addEventListener("input", () => {
   displayTemperature();
   handleBobify();
+  handleClipboardEnabling();
 });
 
 // temperatureDisplay.innerText = slider.value;
 displayTemperature();
+handleClipboardEnabling();
 
 function displayTemperature() {
   temperatureDisplay.innerText = slider.value + "%";
 }
+
+function handleClipboardEnabling() {
+  const outputEmpty = outputField.innerText.trim() === "";
+  outputEmpty
+    ? (clipboardButton.disabled = true)
+    : (clipboardButton.disabled = false);
+}
+
 function bobify(inputString) {
   const outputArray = [];
   const loweredInput = inputString.toLowerCase();
@@ -33,9 +43,10 @@ function bobify(inputString) {
 function handleBobify() {
   const userString = inputText.value;
   outputField.innerText = bobify(userString);
+  handleClipboardEnabling();
 }
 
-function handleClipboard() {
+function handleClipboardCopy() {
   // Copy the text inside the text field
   navigator.clipboard.writeText(outputField.innerText);
 }
