@@ -13,7 +13,6 @@ slider.addEventListener("input", () => {
   handleClipboardEnabling();
 });
 
-// temperatureDisplay.innerText = slider.value;
 displayTemperature();
 handleClipboardEnabling();
 
@@ -28,9 +27,9 @@ function handleClipboardEnabling() {
     : (clipboardButton.disabled = false);
 }
 
-function bobify(inputString) {
+function bobify() {
   const outputArray = [];
-  const loweredInput = inputString.toLowerCase();
+  const loweredInput = inputText.value.toLowerCase();
   for (character of loweredInput) {
     const isUpper = Math.random() < slider.value / 100;
     outputArray.push(
@@ -41,8 +40,7 @@ function bobify(inputString) {
 }
 
 function handleBobify() {
-  const userString = inputText.value;
-  outputField.innerText = bobify(userString);
+  outputField.innerText = bobify();
   handleClipboardEnabling();
 }
 
