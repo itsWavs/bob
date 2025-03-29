@@ -1,0 +1,6 @@
+services:
+    bob:
+        image: itswavs/bobify
+        build: .
+        ports:
+            - 1888:80
