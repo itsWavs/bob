@@ -17,4 +17,4 @@ jobs:
             - name: Build the docker image
               run: docker build . --file Dockerfile --tag itswavs/bobify:$(date +%s)
             - name: Push the created docker image
-              run: docker push
+              run: docker push itswavs/bobify
