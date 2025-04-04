@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bobifier</title>
-    <link rel="icon" type="image/svg" href="/img/BobifyLogo.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.grey.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <h1 align="center" style="margin: 0">
-        <img style="height: 50px" src="img/BobifyLogo.svg" alt="Bobify Logo" />
-        obifier
-      </h1>
-    </header>
-    <main class="container">
-      <article>
-        <input name="" id="input_string" placeholder="Text to Bobify" />
-        <footer>
-          <p align="center">Set your Bobifying Temperature here:</p>
-          <input type="range" id="slider" min="0" max="100" step="10" />
-          <p align="center" id="temperatureDisplay"></p>
-        </footer>
-      </article>
-      <section align="center">
-        <button id="bobifyButton">Bobify!</button>
-      </section>
-      <article align="center">
-        <div id="output" style="height: 4em; overflow-y: auto"></div>
-        <footer align="center">
-          <button id="clipboardButton">Copy to clipboard</button>
-        </footer>
-      </article>
-    </main>
-    <script defer src="./app.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bobifier</title>
+        <link rel="icon" type="image/svg" href="/img/BobifyLogo.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.grey.min.css"
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <script defer src="./app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 align="center" style="margin: 0">
+                <img
+                    style="height: 50px"
+                    src="img/BobifyLogo.svg"
+                    alt="Bobify Logo"
+                />
+                obifier
+            </h1>
+        </header>
+        <main class="container">
+            <article>
+                <input name="" id="input_string" placeholder="Text to Bobify" />
+                <footer>
+                    <p align="center">Set your Bobifying Temperature here:</p>
+                    <input
+                        type="range"
+                        id="slider"
+                        min="0"
+                        max="100"
+                        step="10"
+                    />
+                    <p align="center" id="temperatureDisplay"></p>
+                </footer>
+            </article>
+            <section align="center">
+                <button id="bobifyButton">Bobify!</button>
+            </section>
+            <article align="center">
+                <div id="output" style="height: 4em; overflow-y: auto"></div>
+                <footer align="center">
+                    <button id="clipboardButton">Copy to clipboard</button>
+                </footer>
+            </article>
+        </main>
+    </body>
 </html>

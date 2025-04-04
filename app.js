@@ -1,3 +1,8 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/worker.js', { scope: '/' });
+}
+
+
 const inputText = document.getElementById("input_string");
 const outputField = document.getElementById("output");
 const bobifyButton = document.getElementById("bobifyButton");

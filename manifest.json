@@ -1,0 +1,28 @@
+{
+    "short_name": "Bobifier",
+    "name": "Bobifier: Bobify your texts!",
+    "icons": [
+        {
+            "src": "/img/BobifyLogo.svg",
+            "type": "image/svg+xml",
+            "sizes": "100x100"
+        },
+        {
+            "src": "/img/BobifyLogo_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/img/BobifyLogo_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/BobifyLogo_100.png",
+            "type": "image/png",
+            "sizes": "100x100"
+        }
+    ],
+    "display": "fullscreen",
+    "start_url": "/"
+}
